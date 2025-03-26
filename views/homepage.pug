@@ -1,0 +1,23 @@
+doctype html
+html
+    head
+        title= "HomePage"
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        h1 Test Object Data
+        a(href="/update-cobj") Add to this table
+        br
+        table(border="1")
+            thead
+                tr
+                    th Object ID
+                    th Name
+                    th Bio
+            tbody
+                each item in data
+                    tr
+                        td= item.properties.object_id
+                        td= item.properties.name
+                        td= item.properties.bio
+       
